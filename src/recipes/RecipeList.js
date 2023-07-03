@@ -22,7 +22,7 @@ function RecipeList() {
                 return response.json();
             })
             .then((data) => {
-                if (data.recipes) {
+                if (Array.isArray(data.recipes)) {
                     setRecipes(data.recipes.slice(0, 200));
                 } else {
                     setRecipes([]);
