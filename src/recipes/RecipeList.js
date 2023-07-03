@@ -23,10 +23,7 @@ function RecipeList() {
             })
             .then((data) => {
                 if (data.recipes) {
-                    const desiredRecipeCount = 200;
-                    const uniqueRecipes = removeDuplicates(data.recipes);
-                    setRecipes(uniqueRecipes.slice(0, desiredRecipeCount));
-                    // setRecipes(data.recipes.slice(0, 200));
+                    setRecipes(data.recipes.slice(0, 200));
                 } else {
                     setRecipes([]);
                 }
