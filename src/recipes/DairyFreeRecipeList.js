@@ -6,7 +6,7 @@ function DairyFreeRecipeList() {
     const [dairyFreeRecipes, setDairyFreeRecipes] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/recipes/dairy")
+        fetch("https://meal-planning-be.onrender.com/recipes/dairy")
             .then((response) => {
                 return response.json();
             })

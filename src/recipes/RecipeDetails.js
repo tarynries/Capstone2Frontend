@@ -10,7 +10,7 @@ function RecipeDetails() {
     console.log(useParams());
 
     useEffect(() => {
-        fetch(`http://localhost:3001/recipes/${id}`)
+        fetch(`https://meal-planning-be.onrender.com/recipes/${id}`)
             .then((response) => response.json())
             .then((data) => {
                 setRecipe(data.recipe);

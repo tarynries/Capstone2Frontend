@@ -16,7 +16,7 @@ function ShoppingList() {
 
     async function fetchGroceryList() {
         try {
-            const response = await axios.get('http://localhost:3001/api/shopping-list'); // Change the API endpoint to match your backend route
+            const response = await axios.get('https://meal-planning-be.onrender.com/api/shopping-list'); // Change the API endpoint to match your backend route
             setGroceryList(response.data);
         } catch (error) {
             console.error('Error fetching grocery list:', error);
@@ -26,7 +26,7 @@ function ShoppingList() {
     async function addItem() {
         if (newItem.trim() !== '') {
             try {
-                const response = await axios.post('http://localhost:3001/api/shopping-list', { name: newItem }); // Change the API endpoint to match your backend route
+                const response = await axios.post('https://meal-planning-be.onrender.com/api/shopping-list', { name: newItem }); // Change the API endpoint to match your backend route
                 setGroceryList([...groceryList, response.data]);
                 setNewItem('');
             } catch (error) {
@@ -37,7 +37,7 @@ function ShoppingList() {
 
     async function removeItem(itemId) {
         try {
-            await axios.delete(`http://localhost:3001/api/shopping-list/${itemId}`); // Change the API endpoint to match your backend route
+            await axios.delete(`https://meal-planning-be.onrender.com/api/shopping-list/${itemId}`); // Change the API endpoint to match your backend route
             const updatedList = groceryList.filter((item) => item.id !== itemId);
             setGroceryList(updatedList);
         } catch (error) {

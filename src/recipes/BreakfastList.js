@@ -6,7 +6,7 @@ function BreakfastRecipeList() {
     const [breakfastRecipes, setBreakfastRecipes] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/recipes/breakfast")
+        fetch("https://meal-planning-be.onrender.com/recipes/breakfast")
             .then((response) => {
                 return response.json();
             })

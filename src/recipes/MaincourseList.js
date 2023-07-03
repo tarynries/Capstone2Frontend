@@ -6,7 +6,7 @@ function MainCourseRecipeList() {
     const [maincourseRecipes, setMainCourseRecipes] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/recipes/maincourse")
+        fetch("https://meal-planning-be.onrender.com/recipes/maincourse")
             .then((response) => {
                 return response.json();
             })

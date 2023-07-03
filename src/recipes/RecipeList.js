@@ -12,7 +12,7 @@ function RecipeList() {
     }, []);
 
     const fetchRecipes = () => {
-        let url = "http://localhost:3001/recipes";
+        let url = "https://meal-planning-be.onrender.com/recipes";
         if (searchQuery) {
             url = `${url}/search?query=${searchQuery}`;
         }

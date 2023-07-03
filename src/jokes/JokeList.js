@@ -7,7 +7,7 @@ function JokeList() {
     const [currentJokeIndex, setCurrentJokeIndex] = useState(0);
 
     useEffect(() => {
-        fetch("http://localhost:3001/jokes")
+        fetch("https://meal-planning-be.onrender.com/jokes")
             .then((response) => {
                 return response.json();
             })
