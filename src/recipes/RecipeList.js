@@ -23,7 +23,8 @@ function RecipeList() {
             })
             .then((data) => {
                 if (Array.isArray(data.recipes)) {
-                    setRecipes(data.recipes.slice(0, 200));
+                    const uniqueRecipes = [...new Set(data.recipes)];
+                    setRecipes(uniqueRecipes.slice(0, 200));
                 } else {
                     setRecipes([]);
                 }
